@@ -274,7 +274,7 @@
               {% endif %}
         {% endif %}
 
-            {% if v and not v.id==c.author_id %}
+            {% if v and not v.id==c.author_id and not c.author.is_deleted %}
             <a class="dropdown-item text-danger" href="javascript:void(0)" onclick="post_toast('/settings/block?username={{ c.author.username }}')"
             ><i class="fas fa-user-slash text-danger fa-fw"></i>Block user</a>
             {% endif %}
